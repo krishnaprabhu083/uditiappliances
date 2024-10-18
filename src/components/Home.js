@@ -2,8 +2,6 @@ import React from 'react';
 import whashingImg4 from '../Assets/IMG8.png';
 import logo from "../Assets/logo2.png"
 import logoU from "../Assets/logoU.png"
-import product1 from "../Assets/wasgung.png"
-import heater from "../Assets/HEATER 2.jpg"
 import OurProducts from './OurProducts'
 
 const Home = () => {
