@@ -17,7 +17,7 @@ const InstantWaterHeaterTypes = () => {
       inletOutlet: 'Threaded Inlet / Outlet',
       warranty: '10 Years',
       color: 'Black',
-      image: grinderImg1,
+      images: [grinderImg1, grinderImg1, grinderImg1], // Add more images as needed
       power: {
         current: '1 hour runs will take 2½ units',
         mcb: '16A MCB',
@@ -38,7 +38,7 @@ const InstantWaterHeaterTypes = () => {
       inletOutlet: 'N/A',
       warranty: '10 Years',
       color: 'Grey',
-      image: grinderImg2,
+      images: [grinderImg2, grinderImg2, grinderImg2], // Add more images as needed
       power: {
         current: '1 hour runs will take 2½ units',
         switch: '16A On/Off Switch only',
@@ -58,7 +58,7 @@ const InstantWaterHeaterTypes = () => {
       inletOutlet: 'N/A',
       warranty: '10 Years',
       color: 'Grey and Black',
-      image: grinderImg3,
+      images: [grinderImg3, grinderImg3, grinderImg3], // Add more images as needed
       power: {
         current: '1 hour runs will take 2½ units',
         switch: 'N/A',
@@ -76,7 +76,6 @@ const InstantWaterHeaterTypes = () => {
   const handleCardClick = (modelId) => {
     navigate(`/water-heater/specifications/${modelId}`);
   };
-  
 
   return (
     <div className="container">
@@ -87,20 +86,33 @@ const InstantWaterHeaterTypes = () => {
           <div className="col-sm-12 col-md-6 col-lg-4 mb-4 mt-2" key={model.id}>
             <div 
               className="card border-0 rounded-lg shadow-lg h-100 transition-transform duration-300 hover:shadow-2xl hover:scale-105" 
-              style={{ backgroundColor: '', borderRadius: '1rem', overflow: 'hidden' }}
+              style={{ borderRadius: '1rem', overflow: 'hidden' }}
             >
-              {/* Image Section */}
-              <div className="position-relative">
-                <img
-                  src={model.image}
-                  alt={model.name}
-                  className="card-img-top img-fluid"
-                  style={{
-                    height: '250px',
-                    objectFit: 'contain',
-                    transition: 'transform 0.4s ease-in-out',
-                  }}
-                />
+              {/* Carousel Section */}
+              <div id={`carousel-${model.id}`} className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                  {model.images.map((image, index) => (
+                    <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                      <img
+                        src={image}
+                        className="d-block w-100"
+                        alt={model.name}
+                        style={{
+                          height: '250px',
+                          objectFit: 'contain',
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target={`#carousel-${model.id}`} data-bs-slide="prev">
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target={`#carousel-${model.id}`} data-bs-slide="next">
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
               </div>
 
               {/* Card Body */}

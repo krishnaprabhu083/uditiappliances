@@ -1,10 +1,50 @@
-/* Apply flexbox to the main container */
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Nunito', sans-serif; /* Use Nunito for body text */
+  color: #333; /* Dark text for better readability */
+  line-height: 1.6; /* Increased line height for readability */
+  -webkit-font-smoothing: antialiased; /* Smooth font rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smooth font rendering on Firefox */
 }
+
+/* Body text style */
+body {
+  font-size: 1rem; /* Base font size */
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Use Poppins for headings */
+  margin: 0;
+}
+
+/* Product title style */
+.product-title {
+  font-family: 'Quicksand', sans-serif; /* Friendly font for product titles */
+  font-size: 1.5rem; /* Font size for product title */
+  font-weight: 400; /* Regular weight */
+}
+
+/* Button style */
+.btn {
+  font-family: 'Lato', sans-serif; /* Use Lato for buttons */
+  font-weight: 700; /* Bold weight for buttons */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
 
 /* Ensure that Router takes up the available space */
 #root {
@@ -232,4 +272,15 @@ footer {
   .font-size-large {
     font-size: 1.25rem !important; /* Mobile size */
   }
+}
+.social-links a {
+  color: white; /* Default color */
+}
+
+.social-links a.whatsapp:hover {
+  color: #25D366; /* WhatsApp green */
+}
+
+.social-links a.instagram:hover {
+  color: #C13584; /* Instagram pink */
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import whashingImg4 from '../Assets/IMG8.png';
+import whashingImg4 from '../Assets/homeProductImg.png';
 import logo from "../Assets/logo2.png"
 import logoU from "../Assets/logoU.png"
 import OurProducts from './OurProducts'

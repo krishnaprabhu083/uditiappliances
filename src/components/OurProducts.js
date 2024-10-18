@@ -8,7 +8,7 @@ const ProductPage = () => {
         {
           id: 1,
           name: 'Washing Machine',
-          description: 'High-efficiency washing machine with multiple settings.',
+          description: 'Efficient washing machine with multiple options.',
           price: '$499',
           image:product1,
         },
