@@ -1,7 +1,6 @@
 // WaterHeaterSpecificationPage.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import productImg from "../../Assets/HEATER 2.jpg";
 import grinderImg1 from "../../Assets/grinderImg1.png";
 import grinderImg2 from "../../Assets/grinderImg2.png";
 
