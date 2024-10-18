@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link ,NavLink} from 'react-router-dom';
-import logoU from "../Assets/logoU.png"; // Assuming you have a logo asset
+import { Link } from 'react-router-dom';
 import product1 from "../Assets/wasgung.png"
-import heater from "../Assets/HEATER 2.jpg"
 import heatermain from "../Assets/Heater/heatermain.jpg"
 
 const ProductPage = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; 
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -16,8 +17,7 @@ import './App.css'; // Import your CSS styles
 const App = () => {
   return (
     <Router>
-            <ScrollToTop />
-
+     <ScrollToTop />
       <Navbar />
       <main>
         <Routes>
