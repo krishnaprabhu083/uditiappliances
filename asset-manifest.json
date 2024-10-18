@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.88c34a55.css",
+    "main.js": "/static/js/main.6d4116ff.js",
+    "static/media/HEATER 2.jpg": "/static/media/HEATER 2.c7a4cefbb84a8cffb3f8.jpg",
+    "static/media/premiummain.jpg": "/static/media/premiummain.c7a4cefbb84a8cffb3f8.jpg",
+    "static/media/classicmain.jpg": "/static/media/classicmain.545efec43dff111a4cc3.jpg",
+    "static/media/heatermain.jpg": "/static/media/heatermain.0e6297acb356c7179310.jpg",
+    "static/media/IMG8.png": "/static/media/IMG8.ef72791c0b2c8bebbb57.png",
+    "static/media/economymain.png": "/static/media/economymain.239bf1331d4d28dc5b8f.png",
+    "static/media/washImg3.png": "/static/media/washImg3.a6abf21b6a105d315af4.png",
+    "static/media/washImg2.png": "/static/media/washImg2.21360f87a394a461774a.png",
+    "static/media/grinderImg2.png": "/static/media/grinderImg2.af04b5785c8dedd74e5c.png",
+    "static/media/grinderImg1.png": "/static/media/grinderImg1.9813feab112b7978a641.png",
+    "static/media/udity.webp": "/static/media/udity.eb21d1d7a1b97b0607d2.webp",
+    "static/media/wasgung.png": "/static/media/wasgung.4b9ecfcaefa802cdeb5b.png",
+    "static/media/logo2.png": "/static/media/logo2.277fd533f4bee1ae6257.png",
+    "index.html": "/index.html",
+    "main.88c34a55.css.map": "/static/css/main.88c34a55.css.map",
+    "main.6d4116ff.js.map": "/static/js/main.6d4116ff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88c34a55.css",
+    "static/js/main.6d4116ff.js"
+  ]
+}
