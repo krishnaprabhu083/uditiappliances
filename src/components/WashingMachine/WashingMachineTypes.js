@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import product1 from "../../Assets/wasgung.png"; // Replace with the actual image path
-import product2 from "../../Assets/wasgung.png"; // Replace with another image path
-import product3 from "../../Assets/wasgung.png"; // Replace with another image path
+import washingMachine6kg from "../../Assets/washingMachine/washingMachine6kg-removebg.png"; // Replace with the actual image path
+import washingMachine8kg from "../../Assets/washingMachine/washingMachine8kg-removebg.png"; // Replace with another image path
+import washingMachine9kg from "../../Assets/washingMachine/washingMachine9kg-removebg.png"; // Replace with another image path
 
 const WashingMachineTypes = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const WashingMachineTypes = () => {
       name: '6 KG Capacity Washing Machine',
       price: '₹3658 (Including GST)',
       description: 'Compact washing machine perfect for small families. Washes clothes efficiently within 7 to 10 minutes.',
-      images: [product1, product2, product3],
+      images: [washingMachine6kg,washingMachine6kg],
       specifications: {
         capacity: '6 KG',
         priceDetails: '₹3100 + GST 18% = ₹3658',
@@ -38,7 +38,7 @@ const WashingMachineTypes = () => {
       name: '8 KG Capacity Washing Machine',
       price: '₹4366 (Including GST)',
       description: 'Versatile washing machine for larger families. Washes clothes efficiently within 7 to 10 minutes.',
-      images: [product1, product2, product3],
+      images: [washingMachine8kg, washingMachine8kg, washingMachine8kg],
       specifications: {
         capacity: '8 KG',
         priceDetails: '₹3700 + GST 18% = ₹4366',
@@ -64,7 +64,7 @@ const WashingMachineTypes = () => {
       name: '9 KG Capacity Washing Machine',
       price: '₹4799 (Including GST)',
       description: 'Advanced washing machine with buzzer model. Washes clothes efficiently within 7 to 10 minutes.',
-      images: [product1, product2, product3],
+      images: [washingMachine9kg, washingMachine9kg],
       specifications: {
         capacity: '9 KG',
         priceDetails: '₹4067 + GST 18% = ₹4799',
@@ -87,21 +87,41 @@ const WashingMachineTypes = () => {
     },
   ];
 
-  const handleCardClick = (machineId) => {
-    navigate(`/machine/${machineId}`);
+  // const handleCardClick = (machineId) => {
+  //   navigate(`/machine/${machineId}`);
+  // };
+  const handleCardClick = (product) => {
+    const { name, price } = product; // Extract name and price from the product object
+    const message = `Hi, I would like to buy the ${name} for ${price}.`;
+    const whatsappUrl = `https://wa.me/8122886743?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank'); // Open WhatsApp with the message
   };
+  
 
   return (
     <div className="container my-3">
-      <h2 className="text-center mb-4 text-dark font-weight-bold my-4 mb-5">
-        Explore Our Washing Machine Types
+      
+      <h2 
+        className="appliance-header"
+        
+      >
+         Explore Our Washing Machine Types
+       
       </h2>
-
       {/* Responsive Grid */}
       <div className="row">
         {machineTypes.map((type) => (
           <div className="col-sm-12 col-md-6 col-lg-4 mb-4" key={type.id}>
-            <div className="card border-0 rounded-lg shadow-lg h-100">
+             <div 
+  className="card border-0 rounded-lg h-100" 
+  style={{ 
+    borderRadius: '1rem', 
+    overflow: 'hidden', 
+    boxShadow: '0 1px 5px rgba(0, 0, 0, 0.1)', 
+    transition: 'transform 0.2s, box-shadow 0.2s'
+  }}
+  
+>
               {/* Carousel Section */}
               <div id={`carousel-${type.id}`} className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
@@ -127,14 +147,30 @@ const WashingMachineTypes = () => {
               </div>
 
               {/* Card Body */}
-              <div className="card-body d-flex flex-column p-4" style={{ backgroundColor: '#ffffff' }}>
-                <h5 className="card-title text-dark font-weight-bold mb-3">
-                  {type.name}
-                </h5>
+              <div className="card-body d-flex flex-column p-4 text-muted" style={{ backgroundColor: '#ffffff' }}>
+              <h5
+  className="card-title font-weight-bold mb-3"
+  style={{
+    WebkitBackgroundClip: 'text',
+    fontWeight: 'bold', // Ensures the text is bold
+  }}
+> 
+  {type.name}
+</h5>
+
                 <p className="card-text text-muted mb-4">{type.description}</p>
 
                 <div className="mt-auto">
-                  <h6 className="text-primary font-weight-bold mb-3">Specifications:</h6>
+                <h3
+  className="mt-1 p-2 rounded fw-bold mb-3"
+  style={{
+    fontSize: '1rem',
+    background: 'linear-gradient(45deg, #343a40, #495057)', // Gradient background
+    color: '#ffffff' // Text color for better contrast
+  }}
+>
+  Specifications
+</h3>
                   <ul className="list-unstyled mb-0">
                     <li className="mb-2"><strong>Capacity:</strong> {type.specifications.capacity}</li>
                     <li className="mb-2"><strong>Price:</strong> {type.price}</li>
@@ -155,12 +191,22 @@ const WashingMachineTypes = () => {
                 </div>
 
                 <div className="text-center mt-4">
-                  <button
-                    className="btn btn-primary btn-lg rounded-pill px-5 py-2"
-                    onClick={() => handleCardClick(type.id)}
-                  >
-                    View Details
-                  </button>
+                <button 
+  onClick={() => handleCardClick(type)} // Call the function with the entire product object
+  className="btn mt-auto rounded-pill shadow-sm w-100"
+  style={{ 
+    background: 'linear-gradient(45deg, #28a745, #218838)', // Change to a green gradient background
+    transition: 'background-color 0.3s, transform 0.3s',
+    color: '#fff', // Text color for better contrast
+    border: 'none' // Remove border for a cleaner look
+  }}
+  onMouseOver={(e) => e.currentTarget.style.background = 'linear-gradient(45deg, #218838, #1e7e34)'} // Darker gradient on hover
+  onMouseOut={(e) => e.currentTarget.style.background = 'linear-gradient(45deg, #28a745, #218838)'} // Original gradient on mouse out
+>
+  Buy Now
+</button>
+
+
                 </div>
               </div>
             </div>

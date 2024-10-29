@@ -3,8 +3,7 @@ html, body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  font-family: 'Nunito', sans-serif; /* Use Nunito for body text */
-  color: #333; /* Dark text for better readability */
+  font-family: 'Lato', sans-serif; /* Use Lato for body text */  color: #333; /* Dark text for better readability */
   line-height: 1.6; /* Increased line height for readability */
   -webkit-font-smoothing: antialiased; /* Smooth font rendering on WebKit browsers */
   -moz-osx-font-smoothing: grayscale; /* Smooth font rendering on Firefox */
@@ -72,7 +71,7 @@ footer {
 }
 
 .card:hover {
-  transform: scale(1.01);
+  /* transform: scale(1.01); */
   
 }
 
@@ -142,7 +141,6 @@ footer {
   color: #E74C3C ; /*
   font-family: 'Roboto', sans-serif; /* Clean description font */
   font-size: 1.25rem; /* Readable description font size */
-  margin-bottom: 1.5rem; /* Space below description */
 }
 
 .tagline {
@@ -283,4 +281,63 @@ footer {
 
 .social-links a.instagram:hover {
   color: #C13584; /* Instagram pink */
+}
+.social-links a.facebook:hover {
+  color: blue; 
+}
+@media (max-width: 768px) {
+  .homeproductimg {
+    max-width: 100% !important; /* 100% width on small devices */
+  }
+}
+
+@media (max-width: 768px) { /* Adjust this value based on your breakpoints */
+  .responsive-title {
+      font-size: 1.5rem !important; /* Smaller font size for mobile */
+  }
+
+  .responsive-description {
+      font-size: 0.9rem !important; /* Smaller font size for description */
+  }
+}
+
+/* styles.css */
+
+.appliance-header {
+  font-size: 1.5rem; /* Default size for larger screens */
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center; /* Center text */
+  padding-top: 1rem; /* Add padding for top */
+}
+
+.appliance-header::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #ff416c;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .appliance-header {
+      font-size: 1.2rem !important; /* Smaller font size for mobile */
+  }
+}
+
+
+.icon-hover.facebook:hover {
+  color: #1877F2 !important; /* Facebook blue on hover */
+}
+
+.icon-hover.youtube:hover {
+  color: #FF0000; /* YouTube red on hover */
 }

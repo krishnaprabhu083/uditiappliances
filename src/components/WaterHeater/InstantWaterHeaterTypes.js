@@ -1,9 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import grinderImg1 from "../../Assets/Heater/premiummain.jpg";
-import grinderImg2 from "../../Assets/Heater/classicmain.jpg";
-import grinderImg3 from "../../Assets/Heater/economymain.png"; // Replace with the actual image path
+import premiummain from "../../Assets/Heater/premiummain.jpg";
+import premiummain2 from "../../Assets/Heater/premium-removebg-preview.png";
+import classic from "../../Assets/Heater/classic-removebg-preview.png";
+import classic2 from "../../Assets/Heater/classic.png";
+import economymain from "../../Assets/Heater/economymain.png"; // Replace with the actual image path
+import economy2 from "../../Assets/Heater/eco.png"; 
+import additonalImg from "../../Assets/Heater/additonal.png";
+import specboxImg from "../../Assets/Heater/specbox.jpg";
+import box from "../../Assets/Heater/box.jpg";
 
 const InstantWaterHeaterTypes = () => {
   const navigate = useNavigate();
@@ -11,13 +17,13 @@ const InstantWaterHeaterTypes = () => {
   const waterHeaterModels = [
     {
       id: 301,
-      name: 'Premium Model',
+      name: 'Premium Model Water Heater',
       price: '₹2,891',
       capacity: '1 liter',
       inletOutlet: 'Threaded Inlet / Outlet',
       warranty: '10 Years',
       color: 'Black',
-      images: [grinderImg1, grinderImg1, grinderImg1], // Add more images as needed
+      images: [premiummain,premiummain2, additonalImg,box,specboxImg ], // Add more images as needed
       power: {
         current: '1 hour runs will take 2½ units',
         mcb: '16A MCB',
@@ -32,13 +38,13 @@ const InstantWaterHeaterTypes = () => {
     },
     {
       id: 302,
-      name: 'Classic Model',
+      name: 'Classic Model Water Heater',
       price: '₹2,478',
       capacity: '1 liter',
       inletOutlet: 'N/A',
       warranty: '10 Years',
       color: 'Grey',
-      images: [grinderImg2, grinderImg2, grinderImg2], // Add more images as needed
+      images: [classic, classic2  ,box, specboxImg], // Add more images as needed
       power: {
         current: '1 hour runs will take 2½ units',
         switch: '16A On/Off Switch only',
@@ -52,13 +58,13 @@ const InstantWaterHeaterTypes = () => {
     },
     {
       id: 303,
-      name: 'Economy Model',
+      name: 'Economy Model Water Heater',
       price: '₹1,829',
       capacity: '750 ml',
       inletOutlet: 'N/A',
       warranty: '10 Years',
       color: 'Grey and Black',
-      images: [grinderImg3, grinderImg3, grinderImg3], // Add more images as needed
+      images: [economymain, economy2,box, specboxImg], // Add more images as needed
       power: {
         current: '1 hour runs will take 2½ units',
         switch: 'N/A',
@@ -73,21 +79,38 @@ const InstantWaterHeaterTypes = () => {
     },
   ];
 
-  const handleCardClick = (modelId) => {
-    navigate(`/water-heater/specifications/${modelId}`);
+  // const handleCardClick = (modelId) => {
+  //   navigate(`/water-heater/specifications/${modelId}`);
+  // };
+  const handleCardClick = (product) => {
+    const { name, price } = product; // Extract name and price from the product object
+    const message = `Hi, I would like to buy the ${name} for ${price}.`;
+    const whatsappUrl = `https://wa.me/8122886743?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank'); // Open WhatsApp with the message
   };
-
+  
   return (
     <div className="container">
-      <h2 className="text-center my-4 text-dark font-weight-bold">Explore Our Instant Water Heater Models</h2>
-      
+      <h2 
+        className="appliance-header"
+        
+      >
+         Explore Our Instant Water Heater Models
+       
+      </h2>
       <div className="row">
         {waterHeaterModels.map((model) => (
           <div className="col-sm-12 col-md-6 col-lg-4 mb-4 mt-2" key={model.id}>
-            <div 
-              className="card border-0 rounded-lg shadow-lg h-100 transition-transform duration-300 hover:shadow-2xl hover:scale-105" 
-              style={{ borderRadius: '1rem', overflow: 'hidden' }}
-            >
+    <div 
+  className="card border-0 rounded-lg h-100" 
+  style={{ 
+    borderRadius: '1rem', 
+    overflow: 'hidden', 
+    boxShadow: '0 1px 5px rgba(0, 0, 0, 0.1)', 
+    transition: 'transform 0.2s, box-shadow 0.2s'
+  }}
+  
+>
               {/* Carousel Section */}
               <div id={`carousel-${model.id}`} className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
@@ -116,45 +139,75 @@ const InstantWaterHeaterTypes = () => {
               </div>
 
               {/* Card Body */}
-              <div className="card-body d-flex flex-column p-4" style={{ backgroundColor: '#ffffff' }}>
-                <h5 
-                  className="card-title text-primary font-weight-bold text-uppercase" 
-                  style={{ fontSize: '1.4rem', letterSpacing: '0.5px' }}
+              <div className="card-body d-flex flex-column p-4 text-muted" style={{ backgroundColor: '#ffffff' }}>
+                <h6 
+                  className="card-title fw-bold text-uppercase" 
+                  style={{ fontSize: '1.2rem', letterSpacing: '0.5px' }}
                 >
                   {model.name}
-                </h5>
-                <p className="card-text text-secondary mb-3" style={{ fontSize: '1rem' }}>
+                </h6>
+                <p className="card-text text-secondary mb-2" style={{ fontSize: '1rem' }}>
                   <strong>Price:</strong> {model.price}
                 </p>
 
                 {/* Specifications */}
-                <h6 className="mt-3 text-muted" style={{ fontSize: '1rem' }}>Specifications:</h6>
-                <ul className="list-unstyled" style={{ fontSize: '0.95rem' }}>
-                  <li className="mb-1"><strong>Capacity:</strong> {model.capacity}</li>
-                  <li className="mb-1"><strong>Color:</strong> {model.color}</li>
-                  <li className="mb-1"><strong>Inlet/Outlet:</strong> {model.inletOutlet}</li>
-                  <li className="mb-1"><strong>Warranty:</strong> {model.warranty}</li>
-                  <li className="mb-1"><strong>Power Consumption:</strong> {model.power.current}</li>
-                  {model.power.mcb && <li className="mb-1"><strong>MCB:</strong> {model.power.mcb}</li>}
-                  {model.power.switch && <li className="mb-1"><strong>Switch:</strong> {model.power.switch}</li>}
-                  <li><strong>Features:</strong></li>
-                  <ul>
-                    {model.features.map((feature, index) => (
-                      <li key={index} className="mb-1">• {feature}</li>
-                    ))}
-                  </ul>
-                </ul>
+                <h3
+  className="mt-3 p-2 rounded fw-bold mb-3"
+  style={{
+    fontSize: '1rem',
+    background: 'linear-gradient(45deg, #343a40, #495057)', // Gradient background
+    color: '#ffffff' // Text color for better contrast
+  }}
+>
+  Specifications
+</h3>
+<ul 
+  className="list-unstyled" 
+  style={{ 
+    fontSize: '0.95rem', 
+    margin: '0', 
+    padding: '0' 
+  }}
+>
+  <li style={{ marginBottom: '0.5rem' }}><strong>Capacity:</strong> {model.capacity}</li>
+  <li style={{ marginBottom: '0.5rem' }}><strong>Color:</strong> {model.color}</li>
+  <li style={{ marginBottom: '0.5rem' }}><strong>Inlet/Outlet:</strong> {model.inletOutlet}</li>
+  <li style={{ marginBottom: '0.5rem' }}><strong>Warranty:</strong> {model.warranty}</li>
+  <li style={{ marginBottom: '0.5rem' }}><strong>Power Consumption:</strong> {model.power.current}</li>
+  {model.power.mcb && <li style={{ marginBottom: '0.5rem' }}><strong>MCB:</strong> {model.power.mcb}</li>}
+  {model.power.switch && <li style={{ marginBottom: '0.5rem' }}><strong>Switch:</strong> {model.power.switch}</li>}
+  <li style={{ marginBottom: '0.5rem' }}><strong>Features:</strong></li>
+  <ul 
+    style={{ 
+      paddingLeft: '1.5rem', 
+      margin: '0' // Ensure no extra margin for nested ul
+    }}
+  >
+    {model.features.map((feature, index) => (
+      <li key={index} style={{ marginBottom: '0.5rem' }}>• {feature}</li>
+    ))}
+  </ul>
+</ul>
+
 
                 {/* Button */}
-                <button
-                  className="btn btn-primary mt-auto rounded-pill shadow-sm"
-                  onClick={() => handleCardClick(model.id)}
-                  style={{ transition: 'background-color 0.3s, transform 0.3s' }}
-                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0056b3'}
-                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#007bff'}
-                >
-                  View Specifications
-                </button>
+                <button 
+  onClick={() => handleCardClick(model)} // Call the function with the entire product object
+  className="btn mt-auto rounded-pill shadow-sm w-100"
+  style={{ 
+    background: 'linear-gradient(45deg, #28a745, #218838)', // Change to a green gradient background
+    transition: 'background-color 0.3s, transform 0.3s',
+    color: '#fff', // Text color for better contrast
+    border: 'none' // Remove border for a cleaner look
+  }}
+  onMouseOver={(e) => e.currentTarget.style.background = 'linear-gradient(45deg, #218838, #1e7e34)'} // Darker gradient on hover
+  onMouseOut={(e) => e.currentTarget.style.background = 'linear-gradient(45deg, #28a745, #218838)'} // Original gradient on mouse out
+>
+  Buy Now
+</button>
+
+
+
               </div>
             </div>
           </div>

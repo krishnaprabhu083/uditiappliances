@@ -9,8 +9,11 @@ import WashingMachineTypes from './components/WashingMachine/WashingMachineTypes
 import MachineDetailPage from './components/WashingMachine/MachineDetailPage';
 import InstantWaterHeaterTypes from './components/WaterHeater/InstantWaterHeaterTypes';
 import WaterHeaterSpecificationPage from './components/WaterHeater/WaterHeaterSpecificationPage';
+import GrinderTypes from './components/Grinder/GrinderTypes';
+import PumpTypes from './components/Pump/PumpTypes';
+import VideosPage from './components/VideosPage';
 import ScrollToTop from './components/ScrollToTop'
-
+import WhatsAppIcon from './components/WhatsAppIcon'; // Import the WhatsAppIcon component
 import './App.css'; 
 
 const App = () => {
@@ -23,13 +26,16 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/ourProducts" element={<OurProducts />} />
-          <Route path="/MachineTypes1" element={<WashingMachineTypes />} />
+          <Route path="/WashingMachine" element={<WashingMachineTypes />} />
           <Route path="/machine/:id" element={<MachineDetailPage />} />
-
-          <Route path="/MachineTypes2" element={<InstantWaterHeaterTypes />} />
+          <Route path="/WaterHeater" element={<InstantWaterHeaterTypes />} />
           <Route path="/water-heater/specifications/:modelId" element={<WaterHeaterSpecificationPage />} />
+          <Route path="/Grinder" element={<GrinderTypes />} />
+          <Route path="/Pump" element={<PumpTypes />} />
+          <Route path="/videos" element={<VideosPage />} />
         </Routes>
       </main>
+      <WhatsAppIcon />
       <Footer />
     </Router>
   );

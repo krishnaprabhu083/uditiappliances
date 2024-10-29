@@ -31,41 +31,41 @@ const Home = () => {
           
           {/* Title and Description */}
           <h4 
-            className="fw-bold mb-0" 
-            style={{ fontSize: "2.2rem", position: "relative" }}
-          >
-            <span className='fw-bold' style={{ fontSize: "inherit" }}>
-              <img 
-                src={logoU} 
-                alt="Uditi Logo" 
-                style={{ 
-                  width: "35px", 
-                  marginBottom: "28px",
-                  maxWidth: '100%', // Responsive image
-                }} 
-              />
-            </span>
-            <span className='mt-2'>diti Appliances</span>
-            
-            {/* Description with responsive font */}
-            <p
-              className="home-description mt-0 mb-2"
-              style={{
-                fontSize: "1rem", // Increased size for better readability
-                color: "#7f8c8d", // Subtle gray for description
-                fontStyle: "italic", // Add italics for sophistication
-                letterSpacing: "0.03rem",
-              }}
-            >
-              Smart Appliances, Smart Life...
-            </p>
-          </h4>
+    className="fw-bold mb-0 responsive-title" 
+    style={{ fontSize: "2.2rem", position: "relative" }}
+>
+    <span className='fw-bold' style={{ fontSize: "inherit" }}>
+        <img 
+            src={logoU} 
+            alt="Uditi Logo" 
+            style={{ 
+                width: "35px", 
+                marginBottom: "28px",
+                maxWidth: '100%', // Responsive image
+            }} 
+        />
+    </span>
+    <span className='mt-2'>diti Appliances</span>
+    
+    {/* Description with responsive font */}
+    <p
+        className="home-description  mb-0 responsive-description"
+        style={{
+            color: "#7f8c8d", // Subtle gray for description
+            fontStyle: "italic", // Add italics for sophistication
+            letterSpacing: "0.03rem",
+        }}
+    >
+        Smart Appliances, Smart Life...
+    </p>
+</h4>
+
   
           {/* Image of the Washing Machine */}
           <img
             src={whashingImg4}
             alt="Washing Machine"
-            className="img-fluid mt-4"
+            className="img-fluid mt-4 homeproductimg"
             style={{ 
               width: "100%", 
               maxWidth: '70%', 
@@ -78,7 +78,7 @@ const Home = () => {
     </div>
   
     {/* OurProducts Section */}
-    <div className="products-container container">
+    <div className="products-container">
       <OurProducts />
     </div>
   </div>
