@@ -130,7 +130,7 @@ const PumpTypes = () => {
 
         {/* Card Body */}
         <div className="card-body d-flex flex-column p-4" style={{ backgroundColor: '#ffffff' }}>
-        <h5 className="card-title text-muted font-weight-bold mb-3">
+        <h5 className="card-title text-muted fw-bold mb-3">
       {type.name}
     </h5>
     <p className="card-text text-muted mb-4">{type.description}</p>

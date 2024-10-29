@@ -142,7 +142,7 @@ const GrinderTypes = () => {
 
               {/* Card Body */}
              <div className="card-body d-flex flex-column p-4" style={{ backgroundColor: '#ffffff' }}>
-             <h5 className="card-title text-center text-danger font-weight-bold">{type.name}</h5>
+             <h5 className="card-title text-center text-danger fw-bold">{type.name}</h5>
     <p className="card-text text-muted mb-3 text-center">{type.description}</p>
     <p className="text-success font-weight-bold text-center fs-5">{type.price}</p>
 

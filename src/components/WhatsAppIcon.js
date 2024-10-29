@@ -12,8 +12,8 @@ const WhatsAppIcon = () => {
       onClick={handleClick} 
       style={{
         position: "fixed", 
-        bottom: "20px", 
-        right: "20px", 
+        bottom: "30px", 
+        right: "30px", 
         cursor: "pointer", 
         zIndex: 9999
       }}
@@ -21,7 +21,7 @@ const WhatsAppIcon = () => {
       <img 
         src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
         alt="WhatsApp" 
-        style={{ width: "50px", height: "50px" }} 
+        style={{ width: "70px", height: "70px" }} 
       />
     </div>
   );
