@@ -1,10 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import pumpImg1 from "../../Assets/Pump/pumpImg1.png"; // Replace with actual image paths
 import pumpImg2 from "../../Assets/Pump/pumpImg2.png"; // Replace with actual image paths
 
 const PumpTypes = () => {
-  const navigate = useNavigate();
 
   const pumpTypes = [
     {

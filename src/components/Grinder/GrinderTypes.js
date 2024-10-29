@@ -1,6 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import grinder1 from "../../Assets/Grinder/grinderImg1.png";
 import cherryred from "../../Assets/Grinder/cherryred.png";
 import grinderorange from "../../Assets/Grinder/grinder orange.png";
 import grinder2 from "../../Assets/Grinder/grinderImg1.png"; // Replace with another image path
@@ -8,7 +6,6 @@ import grinderImg3 from "../../Assets/Grinder/grinderImg3.png"; // Replace with 
 import grinderImg4 from "../../Assets/Grinder/grinderImg4.png"; // Replace with another image path
 
 const GrinderTypes = () => {
-  const navigate = useNavigate();
 
   const grinderTypes = [
     {

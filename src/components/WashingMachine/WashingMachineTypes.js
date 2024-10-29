@@ -1,11 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import washingMachine6kg from "../../Assets/washingMachine/washingMachine6kg-removebg.png"; // Replace with the actual image path
 import washingMachine8kg from "../../Assets/washingMachine/washingMachine8kg-removebg.png"; // Replace with another image path
 import washingMachine9kg from "../../Assets/washingMachine/washingMachine9kg-removebg.png"; // Replace with another image path
 
 const WashingMachineTypes = () => {
-  const navigate = useNavigate();
+ 
 
   const machineTypes = [
     {

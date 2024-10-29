@@ -1,6 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
 import premiummain from "../../Assets/Heater/premiummain.jpg";
 import premiummain2 from "../../Assets/Heater/premium-removebg-preview.png";
 import classic from "../../Assets/Heater/classic-removebg-preview.png";
@@ -12,7 +10,6 @@ import specboxImg from "../../Assets/Heater/specbox.jpg";
 import box from "../../Assets/Heater/box.jpg";
 
 const InstantWaterHeaterTypes = () => {
-  const navigate = useNavigate();
 
   const waterHeaterModels = [
     {
