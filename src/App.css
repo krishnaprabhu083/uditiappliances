@@ -271,20 +271,7 @@ footer {
     font-size: 1.25rem !important; /* Mobile size */
   }
 }
-.social-links a {
-  color: white; /* Default color */
-}
 
-.social-links a.whatsapp:hover {
-  color: #25D366; /* WhatsApp green */
-}
-
-.social-links a.instagram:hover {
-  color: #C13584; /* Instagram pink */
-}
-.social-links a.facebook:hover {
-  color: blue; 
-}
 @media (max-width: 768px) {
   .homeproductimg {
     max-width: 100% !important; /* 100% width on small devices */
@@ -334,10 +321,18 @@ footer {
 }
 
 
-.icon-hover.facebook:hover {
-  color: #1877F2 !important; /* Facebook blue on hover */
+.whatsapp {
+  color: #25D366; /* WhatsApp color */
 }
 
-.icon-hover.youtube:hover {
-  color: #FF0000; /* YouTube red on hover */
+.instagram {
+  color: #E1306C; /* Instagram color */
+}
+
+.facebook {
+  color: #3b5998; /* Facebook color */
+}
+
+.youtube {
+  color: #FF0000; /* YouTube color */
 }
