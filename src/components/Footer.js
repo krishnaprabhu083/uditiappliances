@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-links mb-3">
-          <a href="/about" className="text-white mx-2">About Us</a>
+          <a href="/aboutus" className="text-white mx-2">About Us</a>
           <a href="/contact" className="text-white mx-2">Contact</a>
           <a href="/privacy-policy" className="text-white mx-2">Privacy Policy</a>
           <a href="/terms-of-service" className="text-white mx-2">Terms of Service</a>

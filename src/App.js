@@ -14,6 +14,9 @@ import PumpTypes from './components/Pump/PumpTypes';
 import VideosPage from './components/VideosPage';
 import ScrollToTop from './components/ScrollToTop'
 import WhatsAppIcon from './components/WhatsAppIcon'; // Import the WhatsAppIcon component
+import AboutUs from './components/AboutUs';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
 import './App.css'; 
 
 const App = () => {
@@ -33,6 +36,10 @@ const App = () => {
           <Route path="/Grinder" element={<GrinderTypes />} />
           <Route path="/Pump" element={<PumpTypes />} />
           <Route path="/videos" element={<VideosPage />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          
         </Routes>
       </main>
       <WhatsAppIcon />
