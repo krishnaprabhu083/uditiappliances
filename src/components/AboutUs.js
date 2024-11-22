@@ -53,37 +53,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="row mt-5">
-        <div className="col-12 text-center">
-          <h2 className="h3 mb-4">Reach Us</h2>
-          <div className="row">
-            <div className="col-md-3">
-              <p><strong>Branch 1:</strong></p>
-              <p>Ground Floor 19/926/3 Mannuthy Elvira Complex</p>
-              <p>Thrissur, Thrissur-680651</p>
-              <p>Kerala, India</p>
-            </div>
-            <div className="col-md-3">
-              <p><strong>Branch 2:</strong></p>
-              <p>5/918, Shornur Road, Pirayir (PO)</p>
-              <p>Meppermba, Palakkad-678004</p>
-              <p>Kerala, India</p>
-            </div>
-            <div className="col-md-3">
-              <p><strong>Branch 3:</strong></p>
-              <p>Four Wing Avenue, Panniyankara</p>
-              <p>Calicut-673003</p>
-              <p>Kerala, India</p>
-            </div>
-            <div className="col-md-3">
-              <p><strong>Branch 4:</strong></p>
-              <p>Aryad South Village, Ambalappuzha Thaluk</p>
-              <p>Alappuzha-688008</p>
-              <p>Kerala, India</p>
-            </div>
-          </div>
-        </div>
-      </div>
+   
     </div>
   );
 };

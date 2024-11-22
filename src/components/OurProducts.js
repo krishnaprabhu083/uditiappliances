@@ -59,120 +59,192 @@ const ProductPage = () => {
 
   return (
     <div className="container mt-2 pb-5">
-      <h2 className="appliance-header">
-        Our Products
-      </h2>
+  <h5
+    className="appliance-header text-center mb-4"
+    style={{
+      fontSize: "1.5rem",
+      fontWeight: "700",
+      textTransform: "uppercase",
+      color: "#2c3e50",
+      animation: "fade-slide-in 1s ease-in-out",
+    }}
+  >
+    Our Products
+  </h5>
 
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ">
-        {products.map((product, index) => (
-          index < products.length - 2 ? ( // Show regular products
-            <div className="col" key={product.id}>
-              <div className="product-card border-0 hover-card bg-white h-100"
+  <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {products.map((product, index) => (
+      index < products.length - 2 ? (
+        // Regular Products
+        <div
+          className="col"
+          key={product.id}
+          style={{
+            animation: `fade-up 1s ease ${index * 0.1}s forwards`,
+            opacity: 0,
+          }}
+        >
+          <div
+            className="product-card border-0 hover-card bg-white h-100"
+            style={{
+              borderRadius: "1rem",
+              overflow: "hidden",
+              backgroundColor: "#fff",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.05)",
+            }}
+          >
+            {/* Image Section */}
+            <div className="w-100" style={{ height: "250px" }}>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="img-fluid"
                 style={{
-                  borderRadius: "1rem",
-                  overflow: "hidden",
-                  backgroundColor: "#fff",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.05)",
+                  objectFit: "contain",
+                  height: "100%",
+                  width: "100%",
+                  borderRadius: "0.5rem",
+                  transition: "transform 0.3s",
+                }}
+                onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+                onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+              />
+            </div>
+
+            {/* Card Body */}
+            <div className="card-body text-center d-flex flex-column p-3">
+              <h5
+                className="product-name card-title mb-2"
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: "600",
+                  textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
                 }}
               >
-
-                {/* Image Section */}
-                <div className="w-100" style={{ height: "250px" }}>
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="img-fluid"
-                    style={{
-                      objectFit: "contain",
-                      height: "100%",
-                      width: "100%",
-                      borderRadius: "0.5rem",
-                      transition: "transform 0.3s",
-                    }}
-                    onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-                    onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
-                  />
-                </div>
-
-                {/* Card Body */}
-                <div className="card-body text-center d-flex flex-column p-3">
-                  <h5
-                    className="product-name card-title mb-2"
-                    style={{ fontSize: "1.1rem", fontWeight: "600", textShadow: "1px 1px 2px rgba(0,0,0,0.1)" }}
-                  >
-                    {product.name}
-                  </h5>
-                  <p
-                    className="product-description card-text flex-grow-1"
-                    style={{
-                      color: "#666",
-                      fontSize: "0.9rem",
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    {product.description}
-                  </p>
-                </div>
-
-                {/* Card Footer */}
-                <div className="card-footer d-flex justify-content-between align-items-center p-3 h-auto" style={{ backgroundColor: "#f9f9f9" }}>
-                  <h6
-                    className="product-price mb-0"
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "1.1rem",
-                      color: "#ff4b2b",
-                    }}
-                  >
-                    {product.price}
-                  </h6>
-                  <Link
-                    to={`/${product.product}`}
-                    className="btn btn-primary buy-button"
-                    style={{
-                      background: "linear-gradient(45deg, #ff4b2b, #ff416c)",
-                      border: "none",
-                      padding: "0.6rem 1rem",
-                      borderRadius: "0.5rem",
-                      fontSize: "0.85rem",
-                      transition: "background 0.3s ease-in-out",
-                    }}
-                    onMouseOver={(e) => (e.currentTarget.style.background = "linear-gradient(45deg, #ff416c, #ff4b2b)")}
-                    onMouseOut={(e) => (e.currentTarget.style.background = "linear-gradient(45deg, #ff4b2b, #ff416c)")}
-                  >
-                    View Details
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ) : ( // Show Coming Soon for the last two products
-            <div className="col" key={product.id}>
-              <div className="product-card border-0 bg-light h-100"
+                {product.name}
+              </h5>
+              <p
+                className="product-description card-text flex-grow-1"
                 style={{
-                  borderRadius: "1rem",
-                  overflow: "hidden",
-                  backgroundColor: "#e0e0e0",
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  height: '100%',
-                  pointerEvents: 'none', // Disable interactions
+                  color: "#7f8c8d",
+                  fontSize: "0.9rem",
+                  marginBottom: "1rem",
                 }}
               >
-                <h5 className="coming-soon" style={{ fontSize: '1.5rem', color: '#ff4b2b' }}>
-                  Coming Soon
-                </h5>
-                <p className="text-muted" style={{ fontSize: '1rem' }}>
-                  Stay tuned for updates!
-                </p>
-              </div>
+                {product.description}
+              </p>
             </div>
-          )
-        ))}
-      </div>
-    </div>
+
+            {/* Card Footer */}
+            <div
+              className="card-footer d-flex justify-content-between align-items-center p-3 h-auto"
+              style={{ backgroundColor: "#f9f9f9" }}
+            >
+              <h6
+                className="product-price mb-0"
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "1.1rem",
+                  color: "#ff4b2b",
+                }}
+              >
+                {product.price}
+              </h6>
+              <Link
+                to={`/${product.product}`}
+                className="btn btn-primary buy-button"
+                style={{
+                  background: "linear-gradient(45deg, #ff4b2b, #ff416c)",
+                  border: "none",
+                  padding: "0.6rem 1rem",
+                  borderRadius: "0.5rem",
+                  fontSize: "0.85rem",
+                  transition: "background 0.3s ease-in-out",
+                }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.background =
+                    "linear-gradient(45deg, #ff416c, #ff4b2b)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.background =
+                    "linear-gradient(45deg, #ff4b2b, #ff416c)")
+                }
+              >
+                View Details
+              </Link>
+            </div>
+          </div>
+        </div>
+      ) : (
+        // Static "Coming Soon" Section
+        <div
+          className="col"
+          key={product.id}
+          style={{
+            animation: `fade-up 1s ease ${index * 0.1}s forwards`,
+            opacity: 0,
+          }}
+        >
+          <div
+            className="product-card border-0 bg-light h-100"
+            style={{
+              borderRadius: "1rem",
+              overflow: "hidden",
+              backgroundColor: "#e0e0e0",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+            }}
+          >
+            <h5
+              className="coming-soon"
+              style={{
+                fontSize: "1.5rem",
+                color: "#ff4b2b",
+              }}
+            >
+              Coming Soon
+            </h5>
+            <p className="text-muted" style={{ fontSize: "1rem" }}>
+              Stay tuned for updates!
+            </p>
+          </div>
+        </div>
+      )
+    ))}
+  </div>
+
+  {/* Animation Styles */}
+  <style>
+    {`
+      @keyframes fade-slide-in {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fade-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `}
+  </style>
+</div>
+
   );
 };
 

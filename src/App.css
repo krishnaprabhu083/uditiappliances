@@ -336,3 +336,78 @@ footer {
 .youtube {
   color: #FF0000; /* YouTube color */
 }
+
+/* Glassy effect for the previous carousel control icon */
+.carousel-control-prev-icon {
+  background-color: rgba(108, 117, 125, 0.5); /* Semi-transparent gray */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for contrast */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+}
+
+/* Glassy effect for the next carousel control icon */
+.carousel-control-next-icon {
+  background-color: rgba(73, 80, 87, 0.5); /* Semi-transparent dark gray */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Light border for contrast */
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+}
+
+
+
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover .hover-effect {
+  opacity: 1;
+}
+
+.testimonial-card {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* styles.css */
+
+/* 3D Text Effect */
+.text-3d {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 6px 6px 10px rgba(0, 0, 0, 0.15); /* Multiple shadows for depth */  transition: all 0.3s ease; /* Optional transition for smooth hover effect */
+}
+
+
