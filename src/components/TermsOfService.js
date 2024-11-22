@@ -7,7 +7,7 @@ const TermsOfService = () => {
     <div className="container my-5">
       <h1 className="display-4 text-center mb-4">Terms of Service</h1>
       <p className="lead text-center">
-        Welcome to Udity Washing Machine. By using our services, you agree to the following terms and conditions.
+        Welcome to Uditi Washing Machine. By using our services, you agree to the following terms and conditions.
       </p>
 
       <section className="mb-4">
@@ -62,7 +62,7 @@ const TermsOfService = () => {
       <section className="mb-4">
         <h2 className="h4">8. Intellectual Property</h2>
         <p>
-          All content on our website, including text, graphics, logos, and images, is the property of Udity Washing Machine and is protected by intellectual property laws. You may not use our content without our express permission.
+          All content on our website, including text, graphics, logos, and images, is the property of Uditi Washing Machine and is protected by intellectual property laws. You may not use our content without our express permission.
         </p>
       </section>
 
@@ -83,7 +83,7 @@ const TermsOfService = () => {
       <section className="mb-4">
         <h2 className="h4">11. Contact Us</h2>
         <p>
-          If you have any questions about these terms, please contact us at <strong>support@udity.com</strong> or call <strong>+91 8122886743</strong>.
+          If you have any questions about these terms, please contact us at <strong>support@Uditi.com</strong> or call <strong>+91 8122886743</strong>.
         </p>
       </section>
     </div>

@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
     <div className="container my-5">
       <h1 className="display-4 text-center mb-4">Privacy Policy</h1>
       <p className="lead text-center">
-        At Udity Washing Machine, we value your privacy and are committed to protecting your personal information.
+        At Uditi Washing Machine, we value your privacy and are committed to protecting your personal information.
       </p>
 
       <section className="mb-4">
@@ -62,7 +62,7 @@ const PrivacyPolicy = () => {
       <section className="mb-4">
         <h2 className="h4">8. Contact Us</h2>
         <p>
-          If you have any questions or concerns about this privacy policy or our data handling practices, please contact us at <strong>support@udity.com</strong> or call <strong>+91 8122886743</strong>.
+          If you have any questions or concerns about this privacy policy or our data handling practices, please contact us at <strong>support@Uditi.com</strong> or call <strong>+91 8122886743</strong>.
         </p>
       </section>
     </div>
