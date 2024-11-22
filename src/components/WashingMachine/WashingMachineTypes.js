@@ -181,7 +181,7 @@ const WashingMachineTypes = () => {
                       <li className="mb-2"><strong>Pillow Covers:</strong> {type.specifications.pillowCovers || 'None'}</li>
                       <li className="mb-2"><strong>Motor:</strong> {type.specifications.motor}</li>
                       <li className="mb-2"><strong>Power:</strong> {type.specifications.power}</li>
-                      <li className="mb-2"><strong>Weight:</strong> {type.specifications.weight}</li>
+                      <li className="mb-2"><strong>Weight:</strong> {type.specifications.dimensions.weight}</li>
                       <li className="mb-2"><strong>Height:</strong> {type.specifications.dimensions.height}</li>
                       <li className="mb-2"><strong>Width:</strong> {type.specifications.dimensions.width}</li>
                       <li><strong>Warranty:</strong> {type.specifications.warranty}</li>

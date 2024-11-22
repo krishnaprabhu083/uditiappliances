@@ -15,7 +15,7 @@ const InstantWaterHeaterTypes = () => {
     {
       id: 301,
       name: 'Premium Model Water Heater',
-      price: '₹2,891',
+      price: '₹2989',
       capacity: '1 liter',
       inletOutlet: 'Threaded Inlet / Outlet',
       warranty: '10 Years',
@@ -36,7 +36,7 @@ const InstantWaterHeaterTypes = () => {
     {
       id: 302,
       name: 'Classic Model Water Heater',
-      price: '₹2,478',
+      price: '₹2666',
       capacity: '1 liter',
       inletOutlet: 'N/A',
       warranty: '10 Years',
