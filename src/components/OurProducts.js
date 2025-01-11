@@ -43,7 +43,7 @@ const ProductPage = () => {
     {
       id: 5,
       product: 'Mixy',
-      name: 'Mixy',
+      name: 'Mixer Grinder',
       description: 'Powerful mixy with stainless steel blades.',
       price: '',
       image: mixyImg,

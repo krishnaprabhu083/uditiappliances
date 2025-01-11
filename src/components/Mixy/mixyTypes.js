@@ -9,7 +9,7 @@ const MixyTypes = () => {
     {
         images: [mixyImg],
         id: 101,
-        name: 'Mixer',
+        name: 'Mixer Grinder',
         price: '₹3,068',
         brand: 'UDITI',
         model: 'Mixer',
