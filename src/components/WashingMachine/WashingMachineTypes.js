@@ -10,7 +10,7 @@ const WashingMachineTypes = () => {
     {
       id: 101,
       name: '6 KG Capacity Washing Machine',
-      price: '₹3658 (Including GST)',
+      price: '₹3999 (Including GST)',
       description: 'Compact washing machine perfect for small families. Washes clothes efficiently within 7 to 10 minutes.',
       images: [washingMachine6kg,washingMachine6kg],
       specifications: {
@@ -35,7 +35,7 @@ const WashingMachineTypes = () => {
     {
       id: 201,
       name: '8 KG Capacity Washing Machine',
-      price: '₹4566 (Including GST)',
+      price: '₹4999 (Including GST)',
       description: 'Versatile washing machine for larger families. Washes clothes efficiently within 7 to 10 minutes.',
       images: [washingMachine8kg, washingMachine8kg, washingMachine8kg],
       specifications: {
@@ -61,7 +61,7 @@ const WashingMachineTypes = () => {
     {
       id: 202,
       name: '9 KG Capacity Washing Machine',
-      price: '₹4999 (Including GST)',
+      price: '₹5799 (Including GST)',
       description: 'Advanced washing machine with buzzer model. Washes clothes efficiently within 7 to 10 minutes.',
       images: [washingMachine9kg, washingMachine9kg],
       specifications: {

@@ -11,7 +11,7 @@ const GrinderTypes = () => {
     {
       id: 301,
       name: 'Table Top Wet Grinder',
-      price: '₹2900 (Including GST)',
+      price: '₹3900 (Including GST)',
       description: 'Ideal for small families, comes with a robust motor for efficient grinding.',
       images: [cherryred, grinderImg3, grinderImg4],
       specifications: {
@@ -45,7 +45,7 @@ const GrinderTypes = () => {
     {
       id: 302,
       name: 'Tilting Wet Grinder',
-      price: '₹3900 (Including GST)',
+      price: '₹4900 (Including GST)',
       description: 'Durable tilting wet grinder with essential attachments for efficient grinding.',
       images: [grinder2,grinderorange, grinderImg3, grinderImg4],
       specifications: {
