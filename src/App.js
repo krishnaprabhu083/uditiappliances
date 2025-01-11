@@ -18,6 +18,7 @@ import AboutUs from './components/AboutUs';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import './App.css'; 
+import MixyTypes from './components/Mixy/mixyTypes';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/water-heater/specifications/:modelId" element={<WaterHeaterSpecificationPage />} />
           <Route path="/Grinder" element={<GrinderTypes />} />
           <Route path="/Pump" element={<PumpTypes />} />
+          <Route path="/Mixy" element={<MixyTypes />} />
           <Route path="/videos" element={<VideosPage />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

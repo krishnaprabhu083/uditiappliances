@@ -4,6 +4,7 @@ import product1 from "../Assets/wasgung.png";
 import heatermain from "../Assets/Heater/heatermain.jpg";
 import grinderImg from "../Assets/Grinder/grinderImg1.png";
 import pumpImg from "../Assets/Pump/pumpImg.png";
+import mixyImg from "../Assets/Mixy/mixyImg.png";
 
 const ProductPage = () => {
   const products = [
@@ -41,12 +42,14 @@ const ProductPage = () => {
     },
     {
       id: 5,
-      product: 'Microwave',
-      name: 'Microwave',
-      description: 'Compact microwave with multiple cooking modes.',
+      product: 'Mixy',
+      name: 'Mixy',
+      description: 'Powerful mixy with stainless steel blades.',
       price: '',
-      image: 'https://via.placeholder.com/150',
-    },
+      image: mixyImg,
+  }
+  ,
+  
     {
       id: 6,
       product: 'Air Conditioner',
@@ -74,7 +77,7 @@ const ProductPage = () => {
 
   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     {products.map((product, index) => (
-      index < products.length - 2 ? (
+      index < products.length - 1 ? (
         // Regular Products
         <div
           className="col"

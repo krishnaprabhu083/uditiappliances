@@ -5,6 +5,7 @@ import logoU from "../Assets/logoU.png"
 import OurProducts from './OurProducts'
 import Contact from './Contact';
 import VideosPage from './VideosPage';
+import ReactTypingEffect from 'react-typing-effect';  
 
 const Home = () => {
  
@@ -85,14 +86,14 @@ const Home = () => {
   ></div>
 
   <div className="row justify-content-center text-center position-relative" style={{ zIndex: 2 }}>
-    <div className="col-lg-9 col-md-10 col-12 my-lg-5 my-4">
+    <div className="col-lg-9 col-md-10 col-12 my-lg-3 my-4">
       {/* Logo, Title, and Washing Machine Image */}
       <img
         src={logo}
         alt="Uditi Appliances Logo"
         style={{
-          width: "100px",
-          height: "95px",
+          width: "95px",
+          height: "90px",
           marginBottom: "0rem",
           maxWidth: "100%", // Responsive image
         }}
@@ -127,7 +128,14 @@ const Home = () => {
     fontSize:"17px"
   }}
 >
-  Smart Appliances, Smart Life...
+<ReactTypingEffect
+        text={["Smart Appliances, Smart Life..."]}
+        speed={100}
+        eraseSpeed={50}
+        eraseDelay={4000}
+        typingDelay={500}
+      />
+  
 </p>
 
       </h4>
@@ -181,7 +189,13 @@ const Home = () => {
   {/* Features Section */}
   <div className="container my-md-5 my-2">
       <h3 className="text-center mb-5 text-d" style={{ color: "#2980b9" }}>
-        Why Choose Uditi Appliances?
+        <ReactTypingEffect
+        text={["Why Choose Uditi Appliances?"]}
+        speed={100}
+        eraseSpeed={50}
+        eraseDelay={2000}
+        typingDelay={500}
+      />
       </h3>
       <div className="row">
         <div className="col-md-4 text-center">
@@ -203,9 +217,10 @@ const Home = () => {
 
       {/* Testimonials Section */}
       <div className="container my-5">
-        <h3 className="text-center mb-4 " style={{ color: "#8e44ad" }}>
-          What Our Customers Say
-        </h3>
+      <h3 className="text-center mb-4" style={{ color: "#8e44ad" }}>
+      What Our Customers Say
+      
+    </h3>
         <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
