@@ -34,7 +34,6 @@ const MixyTypes = () => {
         price: '₹3000',
         brand: 'UDITI',
         model: 'Blender',
-        mrp: '3500',
         delivery: 'Free home delivery',
         color: 'White and Black',
         jars: '4 pcs glass jars, two blades, two sippers',
