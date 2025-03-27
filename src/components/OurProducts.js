@@ -6,7 +6,6 @@ import grinderImg from "../Assets/Grinder/grinderImg1.png";
 import pumpImg from "../Assets/Pump/pumpImg.png";
 import mixyImg from "../Assets/Mixy/MixyNew.jpeg";
 import AirCoolerImg from "../Assets/AirCooler/AirCooler.jpeg";
-import blenderImg from "../Assets/Mixy/blenderImg.jpeg";
 
 const ProductPage = () => {
   const products = [
