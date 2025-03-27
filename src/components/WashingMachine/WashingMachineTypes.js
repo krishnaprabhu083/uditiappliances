@@ -2,13 +2,38 @@ import React from 'react';
 import washingMachine6kg from "../../Assets/washingMachine/washingMachine6kg-removebg.png"; // Replace with the actual image path
 import washingMachine8kg from "../../Assets/washingMachine/washingMachine8kg-removebg.png"; // Replace with another image path
 import washingMachine9kg from "../../Assets/washingMachine/washingMachine9kg-removebg.png"; // Replace with another image path
+import newWhasingMachine from "../../Assets/washingMachine/New Whsing Machine.jpeg"; // Replace with another image path
+
+
+
 
 const WashingMachineTypes = () => {
  
 
   const machineTypes = [
     {
-      id: 101,
+      id: 201,
+      name: '8 KG Capacity Washing Machine',
+      price: '₹8499 (Including GST)',
+      description: 'Compact washing machine perfect for small families. Washes clothes efficiently within 7 to 10 minutes.',
+      images: [newWhasingMachine],
+      specifications: {
+        capacity: '6 KG',
+        priceDetails: '₹3100 + GST 18% = ₹3658',
+        washTime: '7 to 10 minutes',
+        shirts: 10,
+        pants: 5,
+        sarees: 5,
+        bedsheets: 3,
+        warranty: '5 Years (1 year full free service, balance 4 years material cost only)',
+        motor: 'Quarter HP motor',
+        power: '200 Watts',
+        Dryer:'Available',
+        Rinse:'Available'
+      },
+    },
+    {
+      id: 202,
       name: '6 KG Capacity Washing Machine',
       price: '₹3999 (Including GST)',
       description: 'Compact washing machine perfect for small families. Washes clothes efficiently within 7 to 10 minutes.',
@@ -33,7 +58,7 @@ const WashingMachineTypes = () => {
       },
     },
     {
-      id: 201,
+      id: 203,
       name: '8 KG Capacity Washing Machine',
       price: '₹4999 (Including GST)',
       description: 'Versatile washing machine for larger families. Washes clothes efficiently within 7 to 10 minutes.',
@@ -59,7 +84,7 @@ const WashingMachineTypes = () => {
       },
     },
     {
-      id: 202,
+      id: 204,
       name: '9 KG Capacity Washing Machine',
       price: '₹5799 (Including GST)',
       description: 'Advanced washing machine with buzzer model. Washes clothes efficiently within 7 to 10 minutes.',
@@ -181,9 +206,9 @@ const WashingMachineTypes = () => {
                       <li className="mb-2"><strong>Pillow Covers:</strong> {type.specifications.pillowCovers || 'None'}</li>
                       <li className="mb-2"><strong>Motor:</strong> {type.specifications.motor}</li>
                       <li className="mb-2"><strong>Power:</strong> {type.specifications.power}</li>
-                      <li className="mb-2"><strong>Weight:</strong> {type.specifications.dimensions.weight}</li>
-                      <li className="mb-2"><strong>Height:</strong> {type.specifications.dimensions.height}</li>
-                      <li className="mb-2"><strong>Width:</strong> {type.specifications.dimensions.width}</li>
+                      <li className="mb-2"><strong>Weight:</strong> {type.specifications.dimensions?.weight}</li>
+                      <li className="mb-2"><strong>Height:</strong> {type.specifications.dimensions?.height}</li>
+                      <li className="mb-2"><strong>Width:</strong> {type.specifications.dimensions?.width}</li>
                       <li><strong>Warranty:</strong> {type.specifications.warranty}</li>
                     </ul>
                     <p className="mt-2"><strong>Note:</strong> {type.specifications.additionalInfo}</p>

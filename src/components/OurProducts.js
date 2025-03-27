@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import product1 from "../Assets/wasgung.png";
+import product1 from "../Assets/washingMachine/New Whsing Machine.jpeg";
 import heatermain from "../Assets/Heater/heatermain.jpg";
 import grinderImg from "../Assets/Grinder/grinderImg1.png";
 import pumpImg from "../Assets/Pump/pumpImg.png";
-import mixyImg from "../Assets/Mixy/mixyImg.png";
+import mixyImg from "../Assets/Mixy/MixyNew.jpeg";
+import AirCoolerImg from "../Assets/AirCooler/AirCooler.jpeg";
+import blenderImg from "../Assets/Mixy/blenderImg.jpeg";
 
 const ProductPage = () => {
   const products = [
@@ -18,6 +20,14 @@ const ProductPage = () => {
     },
     {
       id: 2,
+      product: 'Air Cooler',
+      name: 'Air Cooler',
+      description: 'Cooling solution with energy-saving technology.',
+      price: '',
+      image: AirCoolerImg,
+    },
+    {
+      id: 3,
       product: 'WaterHeater',
       name: 'Water Heater',
       description: 'Durable heater perfect for home use.',
@@ -25,7 +35,7 @@ const ProductPage = () => {
       image: heatermain,
     },
     {
-      id: 3,
+      id: 4,
       product: 'Grinder',
       name: 'Grinder',
       description: 'Reliable grinder for various applications.',
@@ -33,7 +43,7 @@ const ProductPage = () => {
       image: grinderImg,
     },
     {
-      id: 4,
+      id: 5,
       product: 'Pump',
       name: 'Pump',
       description: 'Energy-efficient pump with ample performance.',
@@ -41,23 +51,15 @@ const ProductPage = () => {
       image: pumpImg,
     },
     {
-      id: 5,
+      id: 6,
       product: 'Mixy',
       name: 'Mixer Grinder',
       description: 'Powerful mixy with stainless steel blades.',
       price: '',
       image: mixyImg,
   }
-  ,
-  
-    {
-      id: 6,
-      product: 'Air Conditioner',
-      name: 'Air Conditioner',
-      description: 'Cooling solution with energy-saving technology.',
-      price: '',
-      image: 'https://via.placeholder.com/150',
-    },
+
+
   ];
 
   return (
@@ -77,7 +79,7 @@ const ProductPage = () => {
 
   <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     {products.map((product, index) => (
-      index < products.length - 1 ? (
+      
         // Regular Products
         <div
           className="col"
@@ -179,44 +181,7 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
-      ) : (
-        // Static "Coming Soon" Section
-        <div
-          className="col"
-          key={product.id}
-          style={{
-            animation: `fade-up 1s ease ${index * 0.1}s forwards`,
-            opacity: 0,
-          }}
-        >
-          <div
-            className="product-card border-0 bg-light h-100"
-            style={{
-              borderRadius: "1rem",
-              overflow: "hidden",
-              backgroundColor: "#e0e0e0",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100%",
-            }}
-          >
-            <h5
-              className="coming-soon"
-              style={{
-                fontSize: "1.5rem",
-                color: "#ff4b2b",
-              }}
-            >
-              Coming Soon
-            </h5>
-            <p className="text-muted" style={{ fontSize: "1rem" }}>
-              Stay tuned for updates!
-            </p>
-          </div>
-        </div>
-      )
+      
     ))}
   </div>
 

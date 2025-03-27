@@ -1,4 +1,6 @@
 import React from 'react';
+import MixyNew from "../../Assets/Mixy/MixyNew.jpeg";
+import MixyNew2 from "../../Assets/Mixy/MixyNew2.jpeg";
 import mixyImg from "../../Assets/Mixy/mixyImg.png";
 import blenderImg2 from "../../Assets/Mixy/mixy15.png";
 import blenderImg from "../../Assets/Mixy/blenderImg.jpeg";
@@ -7,29 +9,50 @@ const MixyTypes = () => {
 
   const mixyModels = [
     {
-        images: [mixyImg],
+        images: [MixyNew,MixyNew2],
         id: 101,
         name: 'Mixer Grinder',
-        price: '₹4,000',
+        price: '₹5,999',
         brand: 'UDITI',
         model: 'Mixer',
         delivery: 'Free home delivery',
-        color: 'Orange with Black',
-        jars: '3 pcs steel jars, 1 juicer jar',
+        color: 'Black',
+        jars: '4 pcs steel jars, 1 juicer jar,Food Processor',
         warranty: '2 years on product and 5 years on motor',
         specialFeature: 'Compact',
         material: 'Copper',
-        includedComponents: 'User Manual, Blades, Jars, Mixer Grinder',
+        includedComponents: 'User Manual, Blades, Jars,Food Processor Kit, Mixer Grinder',
         recommendedUses: 'Juices, Grinding',
         powerSource: 'Corded Electric',
-        wattage: '650 watts',
-        voltage: '230 Volts',
+        wattage: '850 watts',
+        voltage: '250 Volts',
         isDishwasherSafe: 'Yes',
         bladeMaterial: 'Stainless Steel',
     },
     {
+      images: [mixyImg],
+      id: 102,
+      name: 'Mixer Grinder',
+      price: '₹4,000',
+      brand: 'UDITI',
+      model: 'Mixer',
+      delivery: 'Free home delivery',
+      color: 'Orange with Black',
+      jars: '3 pcs steel jars, 1 juicer jar',
+      warranty: '2 years on product and 5 years on motor',
+      specialFeature: 'Compact',
+      material: 'Copper',
+      includedComponents: 'User Manual, Blades, Jars, Mixer Grinder',
+      recommendedUses: 'Juices, Grinding',
+      powerSource: 'Corded Electric',
+      wattage: '650 watts',
+      voltage: '230 Volts',
+      isDishwasherSafe: 'Yes',
+      bladeMaterial: 'Stainless Steel',
+  },
+    {
         images: [blenderImg,blenderImg2],
-        id: 102,
+        id: 103,
         name: 'Blender',
         price: '₹3000',
         brand: 'UDITI',
